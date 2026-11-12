@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.ruff_cache/
+.pytest_cache/
+# Vendor GSDML files are the vendor's: keep them out of the repository.
+gsdml/
+out/
