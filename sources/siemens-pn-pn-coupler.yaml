@@ -1,0 +1,5 @@
+# Siemens PN/PN Coupler (6ES7158-3AD..): couples two PROFINET networks.
+# The file describes the box once per interface (X1, X2); they are merged.
+# 6ES7158-3AD10-0XA0 takes its ports from pluggable BusAdapters and is skipped.
+gsdml: "gsdml-v*-siemens-pnpnioc-*.xml"
+manufacturer: Siemens

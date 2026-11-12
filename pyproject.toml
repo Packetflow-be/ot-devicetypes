@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ot-devicetypes"
+dynamic = ["version"]
+description = "NetBox device types for industrial hardware, generated from PROFINET GSDML files"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "LICENSE-DATA"]
+authors = [{ name = "Packetflow" }]
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6", "jsonschema>=4.18"]
+keywords = ["netbox", "devicetype-library", "profinet", "gsdml", "ot", "ics", "plc"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+ot-devicetypes = "ot_devicetypes.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Packetflow-be/ot-devicetypes"
+Issues = "https://github.com/Packetflow-be/ot-devicetypes/issues"
+
+[tool.setuptools.dynamic]
+version = { attr = "ot_devicetypes.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["ot_devicetypes*"]
+
+[tool.setuptools.package-data]
+ot_devicetypes = ["schema/*"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

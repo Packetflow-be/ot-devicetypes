@@ -1,0 +1,17 @@
+---
+manufacturer: ifm
+model: AL1302
+slug: ifm-al1302
+part_number: AL1302
+description: IO-Link Master DataLine Profinet 8 Ports IP67
+u_height: 0
+is_full_depth: false
+interfaces:
+  - name: X1 P1
+    type: 100base-tx
+  - name: X1 P2
+    type: 100base-tx
+module-bays:
+  - name: Slot 1
+    position: '1'
+comments: Generated from gsdml-v2.34-ifm-al1302-20181105.xml by ot-devicetypes.

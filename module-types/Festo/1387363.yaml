@@ -1,0 +1,6 @@
+---
+manufacturer: Festo
+model: '1387363'
+part_number: '1387363'
+description: Digital input module with 16 channels, 24VDC, PNP, M8 connector
+comments: Generated from gsdml-v2.34-festo-cteu-20230915.xml by ot-devicetypes.

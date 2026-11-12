@@ -1,0 +1,14 @@
+---
+manufacturer: Turck
+model: FEN20-4IOL
+slug: turck-6814140
+part_number: '6814140'
+description: PROFINET IO Block module in IP20
+u_height: 0
+is_full_depth: false
+interfaces:
+  - name: X1 P1
+    type: 100base-tx
+  - name: X1 P2
+    type: 100base-tx
+comments: Generated from gsdml-v2.3-turck-fen20_4iol-20211108-010714.xml by ot-devicetypes.

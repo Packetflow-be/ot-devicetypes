@@ -1,0 +1,14 @@
+---
+manufacturer: WAGO
+model: 750-375/025-000
+slug: wago-750-375-025-000
+part_number: 750-375/025-000
+description: 2-port Fieldbus Coupler PROFINET IO advanced/T for Series 750 and 753 terminalblocks; RT, IRT, MRP, PROFIenergy V1.0 submodules are explicitly controlled by IO-Device (DAP).
+u_height: 0
+is_full_depth: false
+interfaces:
+  - name: X1 P1
+    type: 100base-tx
+  - name: X1 P2
+    type: 100base-tx
+comments: Generated from GSDML-V2.33-wago-series750_753-20230115.xml by ot-devicetypes.

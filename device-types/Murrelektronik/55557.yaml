@@ -1,0 +1,14 @@
+---
+manufacturer: Murrelektronik
+model: 55557 MVK-MPNIO F DI8/4 F DO4
+slug: murrelektronik-55557
+part_number: '55557'
+description: PROFINET F IO module with 8 one-channel or 4 two-channel functional safe inputs and 4 functional safe outputs, IP67 protection type
+u_height: 0
+is_full_depth: false
+interfaces:
+  - name: X1 P1
+    type: 100base-tx
+  - name: X1 P2
+    type: 100base-tx
+comments: Generated from gsdml-v2.31-murrelektronik-mvk_mpnio_f-20150903.xml by ot-devicetypes.

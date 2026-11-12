@@ -1,0 +1,6 @@
+---
+manufacturer: Festo
+model: '574416'
+part_number: '574416'
+description: CECC-S with 32 inputbytes and 32 outputbytes
+comments: Generated from gsdml-v2.34-festo-cteu-20230915.xml by ot-devicetypes.

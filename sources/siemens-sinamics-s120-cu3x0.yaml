@@ -1,0 +1,14 @@
+# Siemens SINAMICS S120 control units with on-board PROFINET.
+# The file writes the last character of the article number as "*".
+# Left out on purpose: the CBE20 entries (an option board in a CU320-2, listed
+# under the control unit's number) and the older CU310 PN (6SL3040-0LA01-...).
+gsdml: "gsdml-v*-siemens-sinamics_s_cu3x0-*.xml"
+manufacturer: Siemens
+expand:
+  "6SL3040-1MA01-0AA*": ["6SL3040-1MA01-0AA0"]
+  "6SL3040-1LA01-0AA*": ["6SL3040-1LA01-0AA0"]
+devices:
+  6SL3040-1MA01-0AA0:
+    model: SINAMICS S120 CU320-2 PN
+  6SL3040-1LA01-0AA0:
+    model: SINAMICS S120 CU310-2 PN

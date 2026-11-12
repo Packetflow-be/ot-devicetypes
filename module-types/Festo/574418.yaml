@@ -1,0 +1,6 @@
+---
+manufacturer: Festo
+model: '574418'
+part_number: '574418'
+description: CECC-LK with 32 inputbytes and 32 outputbytes
+comments: Generated from gsdml-v2.34-festo-cteu-20230915.xml by ot-devicetypes.

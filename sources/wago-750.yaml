@@ -1,0 +1,4 @@
+# WAGO I/O System 750/753: PROFINET fieldbus couplers and their I/O modules.
+# Modules the file lists as "75x-..." (a 750 and a 753 variant) are not written.
+gsdml: "gsdml-v*-wago-series750_753-*.xml"
+manufacturer: WAGO

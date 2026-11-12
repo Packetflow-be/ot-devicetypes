@@ -1,0 +1,17 @@
+---
+manufacturer: Siemens
+model: PN/PN Coupler 6ES7158-3AD01-0XA0
+slug: siemens-6es7158-3ad01-0xa0
+part_number: 6ES7158-3AD01-0XA0
+u_height: 0
+is_full_depth: false
+interfaces:
+  - name: X1 P1
+    type: 100base-tx
+  - name: X1 P2
+    type: 100base-tx
+  - name: X2 P1
+    type: 100base-tx
+  - name: X2 P2
+    type: 100base-tx
+comments: Generated from gsdml-v2.34-siemens-pnpnioc-20191106.xml by ot-devicetypes.

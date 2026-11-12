@@ -1,0 +1,3 @@
+# Festo CTEU-PN bus node for valve terminals.
+gsdml: "gsdml-v*-festo-cteu-*.xml"
+manufacturer: Festo
