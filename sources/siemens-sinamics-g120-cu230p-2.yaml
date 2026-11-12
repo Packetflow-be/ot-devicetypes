@@ -1,0 +1,8 @@
+# Siemens SINAMICS G120 control unit CU230P-2 PN (pumps, fans, compressors).
+gsdml: "gsdml-v*-siemens-sinamics_g120p-*.xml"
+manufacturer: Siemens
+expand:
+  "6SL3243-0BB30-1FAx": ["6SL3243-0BB30-1FA0"]
+devices:
+  6SL3243-0BB30-1FA0:
+    model: SINAMICS G120 CU230P-2 PN

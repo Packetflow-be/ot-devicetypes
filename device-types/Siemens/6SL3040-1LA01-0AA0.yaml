@@ -1,0 +1,14 @@
+---
+manufacturer: Siemens
+model: SINAMICS S120 CU310-2 PN
+slug: siemens-6sl3040-1la01-0aa0
+part_number: 6SL3040-1LA01-0AA0
+description: IO device SINAMICS S120 CU310-2 PN V5.2 with PROFINET-IO interface (RT, IRT and non-cyclic communications, clock cycle synchronization, PROFIsafe, Shared Device, system redundancy S2)
+u_height: 0
+is_full_depth: false
+interfaces:
+  - name: X1 P1
+    type: 100base-tx
+  - name: X1 P2
+    type: 100base-tx
+comments: Generated from GSDML-V2.34-Siemens-Sinamics_S_CU3x0-20220506.xml by ot-devicetypes.

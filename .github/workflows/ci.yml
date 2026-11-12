@@ -1,0 +1,79 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e '.[dev]'
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: pytest -q
+      # The definitions in the repository must be valid NetBox device and module types.
+      - run: ot-devicetypes check
+
+  netbox-import:
+    # Every definition goes through the import page of a real NetBox.
+    name: Import into NetBox
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: netbox
+          POSTGRES_PASSWORD: netbox
+          POSTGRES_DB: netbox
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+      redis:
+        image: redis:7
+        ports: ['6379:6379']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: library
+      - name: Resolve the newest NetBox release
+        id: netbox
+        run: |
+          ref=$(git ls-remote --tags --refs https://github.com/netbox-community/netbox.git 'v*' \
+            | sed 's#.*/##' | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -1)
+          echo "ref=$ref" >> "$GITHUB_OUTPUT"
+          echo "Importing into NetBox $ref"
+      - uses: actions/checkout@v4
+        with:
+          repository: netbox-community/netbox
+          ref: ${{ steps.netbox.outputs.ref }}
+          path: netbox
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: netbox/requirements.txt
+      - name: Install NetBox
+        run: |
+          sed -i 's/psycopg\[c,pool\]/psycopg[binary,pool]/' netbox/requirements.txt
+          pip install -r netbox/requirements.txt
+          cp library/.github/ci/configuration.py netbox/netbox/netbox/configuration.py
+          mkdir -p netbox/netbox/project-static/docs
+      - name: Migrate
+        working-directory: netbox/netbox
+        run: python manage.py migrate --no-input
+      - name: Import every definition
+        working-directory: netbox/netbox
+        run: python "$GITHUB_WORKSPACE/library/.github/ci/netbox_import.py" "$GITHUB_WORKSPACE/library"

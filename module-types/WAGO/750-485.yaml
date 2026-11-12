@@ -1,0 +1,6 @@
+---
+manufacturer: WAGO
+model: 750-485
+part_number: 750-485
+description: 2-channel analog input; 4-20 mA; single-ended; intrinsically safe
+comments: Generated from GSDML-V2.33-wago-series750_753-20230115.xml by ot-devicetypes.

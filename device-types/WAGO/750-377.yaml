@@ -1,0 +1,143 @@
+---
+manufacturer: WAGO
+model: 750-377
+slug: wago-750-377
+part_number: 750-377
+description: 2-port Fieldbus Coupler PROFINET IO advanced ECO for Series 750 and 753 terminalblocks; RT, IRT, MRP, PROFIenergy V1.0 submodules are explicitly controlled by IO-Device (DAP).
+u_height: 0
+is_full_depth: false
+interfaces:
+  - name: X1 P1
+    type: 100base-tx
+  - name: X1 P2
+    type: 100base-tx
+module-bays:
+  - name: Slot 1
+    position: '1'
+  - name: Slot 2
+    position: '2'
+  - name: Slot 3
+    position: '3'
+  - name: Slot 4
+    position: '4'
+  - name: Slot 5
+    position: '5'
+  - name: Slot 6
+    position: '6'
+  - name: Slot 7
+    position: '7'
+  - name: Slot 8
+    position: '8'
+  - name: Slot 9
+    position: '9'
+  - name: Slot 10
+    position: '10'
+  - name: Slot 11
+    position: '11'
+  - name: Slot 12
+    position: '12'
+  - name: Slot 13
+    position: '13'
+  - name: Slot 14
+    position: '14'
+  - name: Slot 15
+    position: '15'
+  - name: Slot 16
+    position: '16'
+  - name: Slot 17
+    position: '17'
+  - name: Slot 18
+    position: '18'
+  - name: Slot 19
+    position: '19'
+  - name: Slot 20
+    position: '20'
+  - name: Slot 21
+    position: '21'
+  - name: Slot 22
+    position: '22'
+  - name: Slot 23
+    position: '23'
+  - name: Slot 24
+    position: '24'
+  - name: Slot 25
+    position: '25'
+  - name: Slot 26
+    position: '26'
+  - name: Slot 27
+    position: '27'
+  - name: Slot 28
+    position: '28'
+  - name: Slot 29
+    position: '29'
+  - name: Slot 30
+    position: '30'
+  - name: Slot 31
+    position: '31'
+  - name: Slot 32
+    position: '32'
+  - name: Slot 33
+    position: '33'
+  - name: Slot 34
+    position: '34'
+  - name: Slot 35
+    position: '35'
+  - name: Slot 36
+    position: '36'
+  - name: Slot 37
+    position: '37'
+  - name: Slot 38
+    position: '38'
+  - name: Slot 39
+    position: '39'
+  - name: Slot 40
+    position: '40'
+  - name: Slot 41
+    position: '41'
+  - name: Slot 42
+    position: '42'
+  - name: Slot 43
+    position: '43'
+  - name: Slot 44
+    position: '44'
+  - name: Slot 45
+    position: '45'
+  - name: Slot 46
+    position: '46'
+  - name: Slot 47
+    position: '47'
+  - name: Slot 48
+    position: '48'
+  - name: Slot 49
+    position: '49'
+  - name: Slot 50
+    position: '50'
+  - name: Slot 51
+    position: '51'
+  - name: Slot 52
+    position: '52'
+  - name: Slot 53
+    position: '53'
+  - name: Slot 54
+    position: '54'
+  - name: Slot 55
+    position: '55'
+  - name: Slot 56
+    position: '56'
+  - name: Slot 57
+    position: '57'
+  - name: Slot 58
+    position: '58'
+  - name: Slot 59
+    position: '59'
+  - name: Slot 60
+    position: '60'
+  - name: Slot 61
+    position: '61'
+  - name: Slot 62
+    position: '62'
+  - name: Slot 63
+    position: '63'
+  - name: Slot 64
+    position: '64'
+comments: Generated from GSDML-V2.33-wago-series750_753-20230115.xml by ot-devicetypes.

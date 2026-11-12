@@ -1,0 +1,3 @@
+# ifm IO-Link master AL1302.
+gsdml: "gsdml-v*-ifm-al1302-*.xml"
+manufacturer: ifm

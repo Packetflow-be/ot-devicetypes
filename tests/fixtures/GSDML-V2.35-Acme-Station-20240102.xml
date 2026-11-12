@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Synthetic test data written for ot-devicetypes. Acme Automation does not exist. -->
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile">
+  <ProfileBody>
+    <DeviceIdentity VendorID="0xF001" DeviceID="0x0001">
+      <InfoText TextId="T_Family"/>
+      <VendorName Value="ACME Automation GmbH"/>
+    </DeviceIdentity>
+    <ApplicationProcess>
+      <DeviceAccessPointList>
+        <!-- One coupler, described once per firmware release. -->
+        <DeviceAccessPointItem ID="DAP_AC100_V10" PhysicalSlots="0..8" FixedInSlots="0">
+          <ModuleInfo>
+            <Name TextId="T_AC100_V10"/>
+            <InfoText TextId="T_AC100_Info"/>
+            <VendorName Value="ACME Automation GmbH"/>
+            <OrderNumber Value="AC-100"/>
+            <SoftwareRelease Value="V1.0"/>
+          </ModuleInfo>
+          <UseableModules>
+            <ModuleItemRef ModuleItemTarget="M_DI8" AllowedInSlots="1..8"/>
+            <ModuleItemRef ModuleItemTarget="M_TELEGRAM" AllowedInSlots="1..8"/>
+          </UseableModules>
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem ID="IF_AC100_V10" SubslotNumber="32768" TextId="T_IF"/>
+            <PortSubmoduleItem ID="P1_AC100_V10" SubslotNumber="32769" TextId="T_P1" MAUTypes="16"/>
+            <PortSubmoduleItem ID="P2_AC100_V10" SubslotNumber="32770" TextId="T_P2" MAUTypes="16"/>
+          </SystemDefinedSubmoduleList>
+        </DeviceAccessPointItem>
+        <DeviceAccessPointItem ID="DAP_AC100_V11" PhysicalSlots="0..8" FixedInSlots="0">
+          <ModuleInfo>
+            <Name TextId="T_AC100_V11"/>
+            <InfoText TextId="T_AC100_Info"/>
+            <VendorName Value="ACME Automation GmbH"/>
+            <OrderNumber Value="AC-100"/>
+            <SoftwareRelease Value="V1.1"/>
+          </ModuleInfo>
+          <UseableModules>
+            <ModuleItemRef ModuleItemTarget="M_DI8" AllowedInSlots="1..8"/>
+            <ModuleItemRef ModuleItemTarget="M_DO8" AllowedInSlots="1..8"/>
+            <ModuleItemRef ModuleItemTarget="M_AI" AllowedInSlots="1..8"/>
+            <ModuleItemRef ModuleItemTarget="M_TELEGRAM" AllowedInSlots="1..8"/>
+          </UseableModules>
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem ID="IF_AC100_V11" SubslotNumber="32768" TextId="T_IF"/>
+            <PortSubmoduleItem ID="P1_AC100_V11" SubslotNumber="32769" TextId="T_P1" MAUTypes="16"/>
+            <PortSubmoduleItem ID="P2_AC100_V11" SubslotNumber="32770" TextId="T_P2">
+              <MAUTypeList>
+                <MAUTypeItem Value="16"/>
+                <MAUTypeItem Value="30"/>
+              </MAUTypeList>
+            </PortSubmoduleItem>
+          </SystemDefinedSubmoduleList>
+        </DeviceAccessPointItem>
+        <!-- A big coupler: more slots than anyone wants as module bays. -->
+        <DeviceAccessPointItem ID="DAP_AC900" PhysicalSlots="0..250" FixedInSlots="0">
+          <ModuleInfo>
+            <Name TextId="T_AC900"/>
+            <InfoText TextId="T_AC900_Info"/>
+            <OrderNumber Value="AC-900/025-000"/>
+            <SoftwareRelease Value="V2.0"/>
+          </ModuleInfo>
+          <UseableModules>
+            <ModuleItemRef ModuleItemTarget="M_DI8" AllowedInSlots="1..250"/>
+          </UseableModules>
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem ID="IF_AC900" SubslotNumber="32768" TextId="T_IF"/>
+            <PortSubmoduleItem ID="P1_AC900" SubslotNumber="32769" TextId="T_P1" MAUTypes="18"/>
+            <PortSubmoduleItem ID="P2_AC900" SubslotNumber="32770" TextId="T_P2" MAUTypes="54"/>
+            <PortSubmoduleItem ID="P3_AC900" SubslotNumber="32771" TextId="T_P3" MAUTypes="99"/>
+          </SystemDefinedSubmoduleList>
+        </DeviceAccessPointItem>
+        <!-- One box with two PROFINET interfaces, described once per interface. -->
+        <DeviceAccessPointItem ID="DAP_GW_X1" PhysicalSlots="0..4" FixedInSlots="0">
+          <ModuleInfo>
+            <Name TextId="T_GW_X1"/>
+            <InfoText TextId="T_GW_X1_Info"/>
+            <OrderNumber Value="GW-200"/>
+            <SoftwareRelease Value="V3.0"/>
+          </ModuleInfo>
+          <UseableModules>
+            <ModuleItemRef ModuleItemTarget="M_TELEGRAM" AllowedInSlots="1..4"/>
+          </UseableModules>
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem ID="IF_GW_X1" SubslotNumber="32768" TextId="T_IF"/>
+            <PortSubmoduleItem ID="P1_GW_X1" SubslotNumber="32769" TextId="T_P1" MAUTypes="16"/>
+            <PortSubmoduleItem ID="P2_GW_X1" SubslotNumber="32770" TextId="T_P2" MAUTypes="16"/>
+          </SystemDefinedSubmoduleList>
+        </DeviceAccessPointItem>
+        <DeviceAccessPointItem ID="DAP_GW_X2" PhysicalSlots="0..4" FixedInSlots="0">
+          <ModuleInfo>
+            <Name TextId="T_GW_X2"/>
+            <InfoText TextId="T_GW_X2_Info"/>
+            <OrderNumber Value="GW-200"/>
+            <SoftwareRelease Value="V3.0"/>
+          </ModuleInfo>
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem ID="IF_GW_X2" SubslotNumber="33024" TextId="T_IF"/>
+            <PortSubmoduleItem ID="P1_GW_X2" SubslotNumber="33025" TextId="T_P1" MAUTypes="10 11 15 16 29 30"/>
+          </SystemDefinedSubmoduleList>
+        </DeviceAccessPointItem>
+        <!-- A drive family: the order number is a pattern, not an article. -->
+        <DeviceAccessPointItem ID="DAP_DRV" PhysicalSlots="0..1" FixedInSlots="0">
+          <ModuleInfo>
+            <Name TextId="T_DRV"/>
+            <InfoText TextId="T_DRV_Info"/>
+            <OrderNumber Value="DRV 1xx-0AA*"/>
+            <SoftwareRelease Value="V4.7"/>
+          </ModuleInfo>
+          <UseableModules>
+            <ModuleItemRef ModuleItemTarget="M_TELEGRAM" FixedInSlots="1"/>
+          </UseableModules>
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem ID="IF_DRV" SubslotNumber="32768" TextId="T_IF"/>
+            <PortSubmoduleItem ID="P1_DRV" SubslotNumber="32769" TextId="T_P1" MAUTypes="16"/>
+            <PortSubmoduleItem ID="P2_DRV" SubslotNumber="32770" TextId="T_P2" MAUTypes="16"/>
+          </SystemDefinedSubmoduleList>
+        </DeviceAccessPointItem>
+        <!-- A head station whose ports sit on a pluggable adapter. -->
+        <DeviceAccessPointItem ID="DAP_HEAD" PhysicalSlots="0..32" FixedInSlots="0">
+          <ModuleInfo>
+            <Name TextId="T_HEAD"/>
+            <InfoText TextId="T_HEAD_Info"/>
+            <OrderNumber Value="HD-300"/>
+            <SoftwareRelease Value="V1.0"/>
+          </ModuleInfo>
+          <SystemDefinedSubmoduleList>
+            <InterfaceSubmoduleItem ID="IF_HEAD" SubslotNumber="32768" TextId="T_IF"/>
+          </SystemDefinedSubmoduleList>
+        </DeviceAccessPointItem>
+      </DeviceAccessPointList>
+      <ModuleList>
+        <ModuleItem ID="M_DI8" ModuleIdentNumber="0x00000001">
+          <ModuleInfo CategoryRef="DI">
+            <Name TextId="T_M_DI8"/>
+            <InfoText TextId="T_M_DI8_Info"/>
+            <OrderNumber Value="AM-DI8"/>
+          </ModuleInfo>
+        </ModuleItem>
+        <ModuleItem ID="M_DO8" ModuleIdentNumber="0x00000002">
+          <ModuleInfo CategoryRef="DO">
+            <Name TextId="T_M_DO8"/>
+            <InfoText TextId="T_M_DO8_Info"/>
+            <OrderNumber Value="AM-DO8"/>
+          </ModuleInfo>
+        </ModuleItem>
+        <ModuleItem ID="M_AI" ModuleIdentNumber="0x00000003">
+          <ModuleInfo CategoryRef="AI">
+            <Name TextId="T_M_AI"/>
+            <InfoText TextId="T_M_AI_Info"/>
+            <OrderNumber Value="AM-AIx"/>
+          </ModuleInfo>
+        </ModuleItem>
+        <ModuleItem ID="M_TELEGRAM" ModuleIdentNumber="0x00000010">
+          <ModuleInfo>
+            <Name TextId="T_M_TEL"/>
+            <InfoText TextId="T_M_TEL_Info"/>
+          </ModuleInfo>
+        </ModuleItem>
+      </ModuleList>
+      <ExternalTextList>
+        <PrimaryLanguage>
+          <Text TextId="T_Family" Value="Acme I/O"/>
+          <Text TextId="T_IF" Value="PN-IO"/>
+          <Text TextId="T_P1" Value="Port 1"/>
+          <Text TextId="T_P2" Value="Port 2"/>
+          <Text TextId="T_P3" Value="Port 3"/>
+          <Text TextId="T_AC100_V10" Value="AC-100 Coupler V1.0"/>
+          <Text TextId="T_AC100_V11" Value="AC-100 Coupler V1.1 (FW 02)"/>
+          <Text TextId="T_AC100_Info" Value="Fieldbus coupler PROFINET IO,   2 ports, up to 8 modules"/>
+          <Text TextId="T_AC900" Value="AC-900 Coupler"/>
+          <Text TextId="T_AC900_Info" Value="Fieldbus coupler PROFINET IO, fibre, extended temperature range"/>
+          <Text TextId="T_GW_X1" Value="Network Gateway X1"/>
+          <Text TextId="T_GW_X1_Info" Value="Gateway between two networks; X1 (left side)"/>
+          <Text TextId="T_GW_X2" Value="Network Gateway X2"/>
+          <Text TextId="T_GW_X2_Info" Value="Gateway between two networks; X2 (right side)"/>
+          <Text TextId="T_DRV" Value="ACME Drive PN V4.7"/>
+          <Text TextId="T_DRV_Info" Value="Frequency converter with PROFINET"/>
+          <Text TextId="T_HEAD" Value="Head Station HD-300"/>
+          <Text TextId="T_HEAD_Info" Value="Head station with pluggable bus adapter"/>
+          <Text TextId="T_M_DI8" Value="AM-DI8 8DI 24V"/>
+          <Text TextId="T_M_DI8_Info" Value="8 digital inputs, 24 V DC"/>
+          <Text TextId="T_M_DO8" Value="AM-DO8 8DO 24V"/>
+          <Text TextId="T_M_DO8_Info" Value="8 digital outputs, 24 V DC, 0.5 A"/>
+          <Text TextId="T_M_AI" Value="AM-AIx analog inputs"/>
+          <Text TextId="T_M_AI_Info" Value="Analog input family"/>
+          <Text TextId="T_M_TEL" Value="Standard telegram 1"/>
+          <Text TextId="T_M_TEL_Info" Value="Cyclic data, 2 words"/>
+        </PrimaryLanguage>
+      </ExternalTextList>
+    </ApplicationProcess>
+  </ProfileBody>
+</ISO15745Profile>

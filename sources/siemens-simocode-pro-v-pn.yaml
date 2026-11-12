@@ -1,0 +1,11 @@
+# Siemens SIRIUS SIMOCODE pro V PN motor management basic units.
+# The "*" in the article number is the supply voltage: B = 24 V DC,
+# U = 110-240 V AC/DC. The last digit: 0 = pro V PN, 1 = pro V PN GP,
+# 2 = pro V PN GP with one RJ45 port.
+# 3UF7011-1AB00-0 is not listed until its article number is confirmed.
+gsdml: "gsdml-v*-siemens-simocodeprovpn-*.xml"
+manufacturer: Siemens
+expand:
+  "3UF7011-1A*00-0": ["3UF7011-1AU00-0"]
+  "3UF7011-1A*00-1": ["3UF7011-1AB00-1", "3UF7011-1AU00-1"]
+  "3UF7011-1A*00-2": ["3UF7011-1AB00-2", "3UF7011-1AU00-2"]

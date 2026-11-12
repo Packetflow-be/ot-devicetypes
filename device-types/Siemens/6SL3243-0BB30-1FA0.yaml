@@ -1,0 +1,14 @@
+---
+manufacturer: Siemens
+model: SINAMICS G120 CU230P-2 PN
+slug: siemens-6sl3243-0bb30-1fa0
+part_number: 6SL3243-0BB30-1FA0
+description: IO device SINAMICS G120P CU230P-2 PN V4.7 with PROFINET-IO interface (RT, IRT and non-cyclic communications)
+u_height: 0
+is_full_depth: false
+interfaces:
+  - name: X1 P1
+    type: 100base-tx
+  - name: X1 P2
+    type: 100base-tx
+comments: Generated from GSDML-V2.31-Siemens-Sinamics_G120P-20200511.xml by ot-devicetypes.

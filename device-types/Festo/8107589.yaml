@@ -1,0 +1,19 @@
+---
+manufacturer: Festo
+model: CTEU-PN-EX1C v2
+slug: festo-8107589
+part_number: '8107589'
+description: CTEU bus coupler for PROFINET IO
+u_height: 0
+is_full_depth: false
+interfaces:
+  - name: X1 P1
+    type: 100base-tx
+  - name: X1 P2
+    type: 100base-tx
+module-bays:
+  - name: Slot 1
+    position: '1'
+  - name: Slot 2
+    position: '2'
+comments: Generated from gsdml-v2.34-festo-cteu-20230915.xml by ot-devicetypes.

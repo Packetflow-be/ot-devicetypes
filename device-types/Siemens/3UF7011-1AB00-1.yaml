@@ -1,0 +1,14 @@
+---
+manufacturer: Siemens
+model: SIMOCODE pro V PN GP 3UF7011-1AB00-1
+slug: siemens-3uf7011-1ab00-1
+part_number: 3UF7011-1AB00-1
+description: SIRIUS motor management and control devices SIMOCODE pro V PN GP V3; PROFINET; 0.30A ... 820A; Current measuring module; expandable with an expansion module (digital module monostable, device module…
+u_height: 0
+is_full_depth: false
+interfaces:
+  - name: X1 P1
+    type: 100base-tx
+  - name: X1 P2
+    type: 100base-tx
+comments: Generated from GSDML-V2.43-SIEMENS-SIMOCODEproVPN-20220817.xml by ot-devicetypes.
